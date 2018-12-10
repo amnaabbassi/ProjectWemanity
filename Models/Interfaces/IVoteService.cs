@@ -4,9 +4,8 @@ using System.Text;
 
 namespace Models.Interfaces
 {
-  public interface IUserService
-  {
-    IEnumerable<User> GetAllUser();
-    User Login(User user);
-  }
+    public interface IVoteService
+    {
+        bool AddVote(Vote vote);
+    }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Models;
+using Models.Interfaces;
 using System;
 
 namespace Infrastructure
@@ -11,9 +12,10 @@ namespace Infrastructure
     {
     }
 
-    public DbSet<User> USers { get; set; }
+    public virtual DbSet<User> USers { get; set; }
+    public virtual DbSet<Vote> Qcms { get; set; }
 
-    protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder builder)
     {
      // var user = new User() { Id = 1, Name = "aa", SurName = "vv" };
      // builder.Entity<User>().HasData(user);  
